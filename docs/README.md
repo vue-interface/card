@@ -1,4 +1,4 @@
-# Badge
+# Card
 
 [[toc]]
 
@@ -6,18 +6,18 @@
 
 NPM
 
-    npm i @vue-interface/badge --save
+    npm i @vue-interface/card --save
 
 Yarn
 
-    yard add @vue-interface/badge
+    yard add @vue-interface/card
 
 CDN
 
-    https://cdn.jsdelivr.net/npm/@vue-interface/badge@<%= pkg.version %>/dist/Badge.min.js
+    https://cdn.jsdelivr.net/npm/@vue-interface/card@<%= pkg.version %>/dist/Card.min.js
 
 ## Syntax
 
 ``` html
-<badge>This is an badge.</badge>
+<card>This is an card.</card>
 ```
