@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Card</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="./dist/Card.css">
+    </head>
+    <body>
+        <div id="app" class="container">
+            <h1 class="mb-5">card</h1>
+
+            <h3>Basic Usage</h3>
+
+            <div class="row">
+                <div class="col-3">
+                    <card>                        
+                        <template #img-top>
+                            <img src="https://placeimg.com/300/100/nature?1" />
+                        </template>
+                        
+                        <template #header>
+                            Header
+                        </template>
+
+                        <template #body>
+                            <card-title>Some Title</card-title>
+                            <card-subtitle>Some Subtitle</card-subtitle>
+                            <card-text>line of text 1</card-text>
+                            <card-link href="#">Link 1</card-link>
+                            <card-link to="/">Link 2</card-link>
+                        </template>
+                        
+                        <template #footer>
+                            Footer
+                        </template>
+
+                        <template #img-bottom>
+                            <card-img-bottom src="https://placeimg.com/300/100/nature?2"></card-img-bottom>
+                        </template>
+                    </card>
+                </div>
+            </div>
+
+            <!--
+            <card style="width:18rem">
+                <card-img-top :src="src"></card-img-top>
+                <card-body>
+                    <card-title>Card Title</card-title>
+                    <card-subtitle class="mb-2" text-muted>Card Subtitle</card-subtitle>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <btn variant="primary">Go somewhere</btn>
+                </card-body>
+            </card>
+
+            <hr>
+
+            <h3>Body</h3>
+
+            <card>
+                <card-body>
+                    This is some text within a card body.
+                </card-body>
+            </card>
+
+            <hr>
+
+            <h3>Titles, text, and links</h3>
+
+            <card style="width: 18rem;">
+                <card-body>
+                    <card-title>Card title</card-title>
+                    <card-subtitle class="mb-2 text-muted">Card subtitle</card-subtitle>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <card-link href="#">Card link</card-link>
+                    <card-link href="#">Another link</card-link>
+                </card-body>
+            </card>
+
+            <hr>
+
+            <h3>Images</h3>
+
+            <card style="width: 18rem;">
+                <card-img-top :src="src" alt="Card image cap"></card-img-top>
+                <card-body>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </card-body>
+            </card>
+
+            <hr>
+
+            <h3>List Groups</h3>
+
+            <card style="width:18rem">
+                <card-header>Featured</card-header>
+                <list-group flush>
+                    <list-group-item>Cras justo odio</list-group-item>
+                    <list-group-item>Dapibus ac facilisis in</list-group-item>
+                    <list-group-item>Vestibulum at eros</list-group-item>
+                </list-group>
+            </card>
+
+            <hr>
+
+            <h3>Kitchen Sink</h3>
+
+            <card style="width:18rem">
+                <card-img-top :src="src"></card-img-top>
+                <card-body>
+                    <card-title>Card Title</card-title>
+                    <card-subtitle class="mb-2" text-muted>Card Subtitle</card-subtitle>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </card-body>
+                <list-group flush>
+                    <list-group-item>Cras justo odio</list-group-item>
+                    <list-group-item>Dapibus ac facilisis in</list-group-item>
+                    <list-group-item>Vestibulum at eros</list-group-item>
+                </list-group>
+                <card-body>
+                    <card-link href="#">Card Link</card-link>
+                    <card-link href="#">Another Link</card-link>
+                </card-body>
+            </card>
+
+            <hr>
+
+            <h3>Header and Footer</h3>
+
+            <card class="mb-4">
+                <card-header>Featured</card-header>
+                <card-body>
+                    <card-title>Special title treatment</card-title>
+                    <p>With supporting text below as a natural lead-in to additional content.</p>
+                    <btn href="#" variant="primary">Go somewhere</btn>
+                </card-body>
+            </card>
+
+            <card class="mb-4">
+                <card-header>Quote</card-header>
+                <card-body>
+                    <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                </card-body>
+            </card>
+
+            <card class="mb-4 text-center">
+                <card-header>Featured</card-header>
+                <card-body>
+                    <card-title>Special title treatment</card-title>
+                    <p>With supporting text below as a natural lead-in to additional content.</p>
+                    <btn href="#" variant="primary">Go somewhere</btn>
+                </card-body>
+                <card-footer text-muted>2 days ago</card-footer>
+            </card>
+        -->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+        <script type="text/javascript" src="./dist/Card.umd.js"></script>
+        <script type="text/javascript">
+            Vue.use(VueRouter);
+
+            const router = new VueRouter({
+                routes: [{
+                    path: '/test',
+                    name: 'Home'
+                }]
+            });
+
+            const {
+                Card,
+                CardBody,
+                CardImgBottom,
+                CardImgTop,
+                CardLink,
+                CardSubtitle,
+                CardText,
+                CardTitle,
+            } = window.Card;
+
+            const vue = new Vue({
+                router,
+                el: '#app',
+                components: {
+                    Card,
+                    CardBody,
+                    CardImgBottom,
+                    CardImgTop,
+                    CardLink,
+                    CardSubtitle,
+                    CardText,
+                    CardTitle,
+                }
+            });
+        </script>
+    </body>
+</html>
