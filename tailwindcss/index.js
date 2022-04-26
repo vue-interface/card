@@ -1,29 +1,30 @@
-const rgba = require('hex-to-rgba');
+const Color = require('color');
 const plugin = require('tailwindcss/plugin');
-const { colors, borderRadius } = require('tailwindcss/defaultTheme');
-// const defaultVariations = require('@vue-interface/variant/tailwindcss/defaultVariations');
+const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = plugin(function({ addComponents, theme }) {
-    const alert = {
-        ':root': {
-            '--card-border-width': theme('card.borderWidth'),
-            '--card-border-radius': theme('card.borderRadius'),
-            '--card-background-color': theme('card.backgroundColo'),
-            '--card-border-color': theme('card.borderColor'),
-            '--card-inner-border-radius': theme('card.inner.borderRadius'),
-            '--card-spacer-padding-y': theme('card.spacer.paddingY'),
-            '--card-spacer-padding-x': theme('card.spacer.paddingX'),
-            
-            '--card-title-padding-y': theme('card.title.paddingY'),
-            '--card-title-padding-x': theme('card.title.paddingX'),
-            
-            '--card-cap-padding-y': theme('card.cap.borderWidth'),
-            '--card-cap-padding-x': theme('card.cap.borderWidth'),
+    console.log(theme('card.cap.backgroundColor'));
 
-            '--card-overlay-padding': theme('card.overlay.borderWidth'),
+    const card = {
+        // ':root': {
+        //     '--card-border-width': theme('card.borderWidth'),
+        //     '--card-border-radius': theme('card.borderRadius'),
+        //     '--card-background-color': theme('card.backgroundColor'),
+        //     '--card-border-color': theme('card.borderColor'),
+        //     '--card-inner-border-radius': theme('card.inner.borderRadius'),
+        //     '--card-spacer-padding-y': theme('card.spacer.paddingY'),
+        //     '--card-spacer-padding-x': theme('card.spacer.paddingX'),
+            
+        //     '--card-title-padding-y': theme('card.title.paddingY'),
+        //     '--card-title-padding-x': theme('card.title.paddingX'),
+            
+        //     '--card-cap-padding-y': theme('card.cap.borderWidth'),
+        //     '--card-cap-padding-x': theme('card.cap.borderWidth'),
 
-            '--card-group-margin': theme('card.group.margin'),
-        },
+        //     '--card-overlay-padding': theme('card.overlay.borderWidth'),
+
+        //     '--card-group-margin': theme('card.group.margin'),
+        // },
 
         //
         // Base styles
@@ -128,7 +129,6 @@ module.exports = plugin(function({ addComponents, theme }) {
         //
         // Header navs
         //
-
         '.card-header-tabs': {
             marginRight: `calc(-1 * ${theme('card.cap.paddingX')} / 2)`,
             marginBottom: `calc(-1 * ${theme('card.cap.paddingY')})`,
@@ -183,7 +183,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             marginBottom: theme('card.group.margin')
         },
         
-        '@media screen(min-width: 576px)': Object.assign({
+        '@media (min-width: 576px)': Object.assign({
             '.card-group': {
                 display: 'flex',
                 flexFlow: 'row wrap',
@@ -202,7 +202,7 @@ module.exports = plugin(function({ addComponents, theme }) {
                 borderLeft: 0,
             },
 
-        }, theme('card.enableRounded') ? {
+        }, theme('card.enableRounded') && {
             '&:not(:last-child)': {
                 borderTopRightRadius: 0,
                 borderBottomRightRadius: 0,
@@ -223,7 +223,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             '&:not(:first-child) .card-img-bottom, &:not(:first-child) .card-footer': {
                 borderBottomLeftRadius: 0
             }
-        } : undefined),
+        }),
                 
         //
         // Accordion
@@ -246,10 +246,10 @@ module.exports = plugin(function({ addComponents, theme }) {
         '.accordion > .card > .card-header': {
             borderRadius: 0,
             marginBottom: `calc(-1 * ${theme('card.borderWidth')})`
-        }  
+        }
     };
 
-    addComponents(alert);
+    addComponents(card);
 }, {
     theme: {
         card: theme => ({
@@ -257,7 +257,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             borderWidth: '1px',
             borderRadius: '.25rem',
             backgroundColor: theme('colors.white', colors.white),
-            borderColor: rgba(theme('colors.black', colors.black), .125),
+            borderColor: Color(theme('colors.black', colors.black)).fade(.875).toString(),
             inner: {
                 borderRadius: `calc(.25rem - 1px)`,
             },
@@ -271,7 +271,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             cap: {
                 paddingY: '.5rem',
                 paddingX: '1rem',
-                backgroundColor: rgba(theme('colors.black', colors.black), .03)
+                backgroundColor: Color(theme('colors.black', colors.black)).fade(.97).toString()
             },
             overlay: {
                 padding: '1rem',
