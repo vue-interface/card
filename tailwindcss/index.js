@@ -1,6 +1,6 @@
 const Color = require('color');
 const plugin = require('tailwindcss/plugin');
-const { colors } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = plugin(function({ addComponents, theme }) {
     const card = {
