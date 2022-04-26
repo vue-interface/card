@@ -3,8 +3,6 @@ const plugin = require('tailwindcss/plugin');
 const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = plugin(function({ addComponents, theme }) {
-    console.log(theme('card.cap.backgroundColor'));
-
     const card = {
         // ':root': {
         //     '--card-border-width': theme('card.borderWidth'),
