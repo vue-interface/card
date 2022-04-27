@@ -8,14 +8,13 @@
                 <slot name="header" />
             </div>
         </template>
-        <template v-if="$slots.body">
-            <div class="card-body">
-                <slot>
+        <slot>
+            <template v-if="$slots.body">
+                <div class="card-body">
                     <slot name="body" />
-                </slot>
-            </div>
-        </template>
-        <slot />
+                </div>
+            </template>
+        </slot>
         <template v-if="$slots.footer">
             <div class="card-footer">
                 <slot name="footer" />
