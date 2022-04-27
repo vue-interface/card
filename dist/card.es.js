@@ -2,7 +2,9 @@ var render = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "card" }, [_vm.$slots["img-top"] ? [_vm._t("img-top")] : _vm._e(), _vm.$slots.header ? [_c("div", { staticClass: "card-header" }, [_vm._t("header")], 2)] : _vm._e(), _vm.$slots.body ? [_c("div", { staticClass: "card-body" }, [_vm._t("body")], 2)] : _vm._e(), _vm._t("default"), _vm.$slots.footer ? [_c("div", { staticClass: "card-footer" }, [_vm._t("footer")], 2)] : _vm._e(), _vm.$slots["img-bottom"] ? [_vm._t("img-bottom")] : _vm._e()], 2);
+  return _c("div", { staticClass: "card" }, [_vm.$slots["img-top"] ? [_vm._t("img-top")] : _vm._e(), _vm.$slots.header ? [_c("div", { staticClass: "card-header" }, [_vm._t("header")], 2)] : _vm._e(), _vm.$slots.body ? [_c("div", { staticClass: "card-body" }, [_vm._t("default", function() {
+    return [_vm._t("body")];
+  })], 2)] : _vm._e(), _vm._t("default"), _vm.$slots.footer ? [_c("div", { staticClass: "card-footer" }, [_vm._t("footer")], 2)] : _vm._e(), _vm.$slots["img-bottom"] ? [_vm._t("img-bottom")] : _vm._e()], 2);
 };
 var staticRenderFns = [];
 function normalizeComponent(scriptExports, render2, staticRenderFns2, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {

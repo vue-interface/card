@@ -10,7 +10,9 @@
         </template>
         <template v-if="$slots.body">
             <div class="card-body">
-                <slot name="body" />
+                <slot>
+                    <slot name="body" />
+                </slot>
             </div>
         </template>
         <slot />
