@@ -5,6 +5,7 @@
   "files": [
     "src",
     "dist",
+    "index.js",
     "tailwindcss"
   ],
   "main": "./dist/card.umd.js",
