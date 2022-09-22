@@ -44,18 +44,14 @@
 
         <script type="module">
             import './index.css';
-            import Vue from 'vue/dist/vue';
+            import { createApp } from 'vue/dist/vue.esm-bundler';
             import { Card } from './index.js';
             
-            Vue.config.devtools = false;
-            Vue.config.productionTip = false;
-            
-            const vue = new Vue({
-                el: '#app',
+            createApp({
                 components: {
                     Card
                 }
-            });
+            }).mount('#app');
         </script>
     </body>
 </html>
