@@ -9,35 +9,57 @@
         <div id="app" class="container mx-auto mb-6">
             <h1 class="text-4xl mb-6">card</h1>
 
-            <h3 class="text-2xl mb-3">Basic Usage</h3>
+            <div class="mb-4">
+                <h3 class="text-2xl mb-3">Basic Usage</h3>
 
-            <card class="md:w-1/2">                        
-                <template #img-top>
-                    <img src="https://placeimg.com/300/100/nature?1" class="card-img-top">
-                </template>
+                <div class="flex gap-2">
+                    <card size="sm" class="flex-1">  
+                        <h2 class="text-lg font-bold mb-2">Small</h2>
+
+                        <p>This is some body text.</p>
+                    </card>
+
+                    <card class="flex-1">  
+                        <h2 class="text-xl font-bold mb-4">Medium</h2>
+
+                        <p>This is some body text.</p>
+                    </card>
+
+                    <card size="lg" class="flex-1">  
+                        <h2 class="text-2xl font-bold mb-4">Large</h2>
+
+                        <p>This is some body text.</p>
+                    </card>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl mb-3">Form with Image Header</h3>
+
+            <card>                       
+                <h2 class="text-2xl font-bold mb-4">Some Title</h2>
+
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2">
+                        <label class="flex-1">First Name</label>
+                        <input class="rounded px-2 py-1 border border-stone-200 focus:border-blue-400 focus:outline outline-4 outline-blue-500/25" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="flex-1">Last Name</label>
+                        <input class="rounded px-2 py-1 border border-stone-200 focus:border-blue-400 focus:outline outline-4 outline-blue-500/25" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="flex-1">Email Name</label>
+                        <input class="rounded px-2 py-1 border border-stone-200 focus:border-blue-400 focus:outline outline-4 outline-blue-500/25" />
+                    </div>
+                </div>
                 
                 <template #header>
-                    Header
-                </template>
-
-                <template #body>
-                    <h2 class="card-title text-lg font-bold">Some Title</h2>
-                    <h3 class="card-subtitle mb-2">Some Subtitle</h3>
-                    <div class="card-text">
-                        <p class="mb-3">Line of text 1</p>
-                        <p class="mb-3">Line of text 2</p>
-                        <p class="mb-3">Line of text 3</p>
-                    </div>
-                    <a href="#" class="card-link">Link 1</a>
-                    <a href="#" class="card-link">Link 2</a>
+                    <img src="https://placehold.co/300x200?1" class="bg-cover object-cover w-full h-48">
                 </template>
                 
                 <template #footer>
-                    Footer
-                </template>
-
-                <template #img-bottom>
-                    <img src="https://placeimg.com/300/100/nature?2" class="card-img-bottom">
+                    <a href="#" class="font-bold">Cancel</a>
+                    <button class="px-3 py-2 bg-blue-600 outline outline-4 focus:outline-blue-600/25 text-white rounded">Submit</button>
                 </template>
             </card>
         </div>
