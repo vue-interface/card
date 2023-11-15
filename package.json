@@ -8,13 +8,13 @@
     "dist"
   ],
   "type": "module",
-  "main": "./dist/checkbox-field.umd.js",
-  "module": "./dist/checkbox-field.js",
+  "main": "./dist/card.umd.js",
+  "module": "./dist/card.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/checkbox-field.js",
-      "require": "./dist/checkbox-field.umd.cjs",
+      "import": "./dist/card.js",
+      "require": "./dist/card.umd.cjs",
       "types": "./dist/index.d.ts"
     },
     "./tailwindcss": "./tailwindcss/index.cjs",
