@@ -5,11 +5,21 @@
   "files": [
     "index.js",
     "src",
-    "dist",
-    "tailwindcss"
+    "dist"
   ],
-  "main": "./dist/card.umd.js",
-  "module": "./index.js",
+  "type": "module",
+  "main": "./dist/checkbox-field.umd.js",
+  "module": "./dist/checkbox-field.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/checkbox-field.js",
+      "require": "./dist/checkbox-field.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./tailwindcss": "./tailwindcss/index.cjs",
+    "./tailwindcss/safelist": "./tailwindcss/safelist.cjs"
+  },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
     "dev": "vite",
