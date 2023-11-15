@@ -16,9 +16,7 @@
       "import": "./dist/card.js",
       "require": "./dist/card.umd.cjs",
       "types": "./dist/index.d.ts"
-    },
-    "./tailwindcss": "./tailwindcss/index.cjs",
-    "./tailwindcss/safelist": "./tailwindcss/safelist.cjs"
+    }
   },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
