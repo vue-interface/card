@@ -1,3 +1,10 @@
+# [2.0.0-beta.4](https://github.com/vue-interface/card/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2023-11-16)
+
+
+### Bug Fixes
+
+* added dark mode support ([26e30c2](https://github.com/vue-interface/card/commit/26e30c25f597650f909508e511c6bcea0efdb6be))
+
 # [2.0.0-beta.3](https://github.com/vue-interface/card/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2023-11-16)
 
 
