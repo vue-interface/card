@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Card</title>
     </head>
-    <body>
-        <div id="app" class="container mx-auto mb-6">
+    <body class="dark:bg-neutral-900 dark:text-white">
+        <div id="app" class="container mx-auto">
             <h1 class="text-4xl mb-6">card</h1>
 
             <div class="mb-4">
@@ -67,7 +67,7 @@
         <script type="module">
             import './index.css';
             import { createApp } from 'vue/dist/vue.esm-bundler';
-            import { Card } from './index.js';
+            import { Card } from './index';
             
             createApp({
                 components: {
